@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { cases } from "@/data/site";
+import { featuredOnHome, workProjects } from "@/data/raboty";
 
 export function Cases() {
   return (
@@ -19,10 +19,16 @@ export function Cases() {
               узла и срыва графика ремонта.
             </p>
           </div>
+          <Link
+            href="/raboty"
+            className="shrink-0 rounded-sm border border-grc-orange px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-grc-orange transition hover:bg-grc-orange hover:text-white"
+          >
+            Все проекты ({workProjects.length})
+          </Link>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {cases.map((item) => {
+          {featuredOnHome.map((item) => {
             const inner = (
               <>
                 <div className="relative aspect-[16/10]">
@@ -33,6 +39,11 @@ export function Cases() {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
+                  {item.detail ? (
+                    <span className="absolute left-3 top-3 rounded-sm bg-grc-orange/90 px-2 py-0.5 text-[10px] font-bold uppercase text-white">
+                      Разбор
+                    </span>
+                  ) : null}
                 </div>
                 <div className="flex flex-1 flex-col p-5">
                   <div className="flex flex-wrap gap-2">
@@ -51,10 +62,12 @@ export function Cases() {
                   <p className="mt-2 text-sm font-medium text-grc-orange-light">
                     {item.client}
                   </p>
-                  <p className="mt-3 flex-1 text-sm text-grc-muted">{item.result}</p>
+                  <p className="mt-3 flex-1 text-sm text-grc-muted">
+                    {item.result}
+                  </p>
                   {item.href ? (
                     <span className="mt-4 text-xs font-bold uppercase tracking-wide text-grc-orange">
-                      Разбор проекта →
+                      Подробнее →
                     </span>
                   ) : null}
                 </div>
@@ -64,7 +77,7 @@ export function Cases() {
             if (item.href) {
               return (
                 <Link
-                  key={item.title}
+                  key={item.slug}
                   href={item.href}
                   className="flex flex-col overflow-hidden rounded-sm border border-grc-border bg-grc-steel transition hover:border-grc-orange/50"
                 >
@@ -75,7 +88,7 @@ export function Cases() {
 
             return (
               <article
-                key={item.title}
+                key={item.slug}
                 className="flex flex-col overflow-hidden rounded-sm border border-grc-border bg-grc-steel"
               >
                 {inner}

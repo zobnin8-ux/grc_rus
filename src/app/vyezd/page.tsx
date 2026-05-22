@@ -40,12 +40,20 @@ export default function VyezdPage() {
                   </li>
                 ))}
               </ul>
+            <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="#contact"
-                className="mt-8 inline-block rounded-sm bg-grc-orange px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-grc-orange-light"
+                className="rounded-sm bg-grc-orange px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-grc-orange-light"
               >
                 Обсудить выезд на объект
               </Link>
+              <Link
+                href="/raboty"
+                className="rounded-sm border border-grc-border bg-grc-steel px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:border-grc-muted"
+              >
+                Все проекты
+              </Link>
+            </div>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-grc-border">
               <Image

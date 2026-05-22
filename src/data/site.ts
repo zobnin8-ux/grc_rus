@@ -111,61 +111,6 @@ export const processSteps = [
   },
 ];
 
-export type CaseItem = {
-  title: string;
-  client: string;
-  result: string;
-  image: string;
-  tags: string[];
-  href?: string;
-};
-
-export const cases: CaseItem[] = [
-  {
-    title: "Восстановление зубчатого колеса конш-машины FRISSE",
-    client: "Mondelēz Русь",
-    result: "Возврат узла в работу без закупки импортного компонента, простой минимизирован.",
-    image: "https://www.1grc.ru/wp-content/uploads/2025/12/image-3.jpg",
-    tags: ["Редуктор", "Стационар"],
-  },
-  {
-    title: "Мобильная расточка траверсы кривошипного пресса Эрфурт",
-    client: "Ульяновский автомобильный завод",
-    result: "Обработка на территории завода в рамках графика капитального ремонта.",
-    image: "https://www.1grc.ru/wp-content/uploads/2025/12/image-4.jpg",
-    tags: ["Пресс", "Выезд"],
-    href: "/vyezd#kejs-uaz",
-  },
-  {
-    title: "Мехобработка колонн портального крана",
-    client: "Волгодонский ЗМО",
-    result: "Крупногабаритные работы мобильным оборудованием на площадке заказчика.",
-    image: "https://www.1grc.ru/wp-content/uploads/2025/12/image-5.jpg",
-    tags: ["Кран", "Выезд"],
-  },
-  {
-    title: "Восстановление цапфы шаровой мельницы",
-    client: "АО «СЗФК»",
-    result: "Соблюдение сроков, работы без вывоза барабана с обогатительной фабрики.",
-    image: "https://www.1grc.ru/wp-content/uploads/2025/12/image-6.jpg",
-    tags: ["ГОК", "Выезд"],
-  },
-  {
-    title: "Ремонт контактных поверхностей электрододержателей ДСП-120",
-    client: "ПАО «Ашинский метзавод»",
-    result: "Портативный фрезерный станок с ЧПУ, бесперебойная работа цеха.",
-    image: "https://www.1grc.ru/wp-content/uploads/2025/12/image-3-768x473.jpg",
-    tags: ["Металлургия", "Выезд"],
-  },
-  {
-    title: "Ремонт станины пресса LZK-6300",
-    client: "ПАО «КАМАЗ», Кузнечный завод",
-    result: "Мобильное оборудование на площадке заказчика, сроки по договору.",
-    image: "https://www.1grc.ru/wp-content/uploads/2025/12/image-4-768x473.jpg",
-    tags: ["Пресс", "Выезд"],
-  },
-];
-
 export const reviews = [
   {
     quote:

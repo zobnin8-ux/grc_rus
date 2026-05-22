@@ -3,7 +3,7 @@ import { brand } from "@/data/site";
 const nav = [
   { href: "#services", label: "Услуги" },
   { href: "#directions", label: "Производство" },
-  { href: "#cases", label: "Кейсы" },
+  { href: "/raboty", label: "Наши работы" },
   { href: "#process", label: "Как работаем" },
   { href: "#contact", label: "Контакты" },
 ];
