@@ -42,6 +42,12 @@ export default function RabotyPage() {
               >
                 Стационарный цех →
               </Link>
+              <Link
+                href="/uslugi"
+                className="text-grc-muted transition hover:text-white"
+              >
+                Услуги →
+              </Link>
             </div>
           </div>
         </section>

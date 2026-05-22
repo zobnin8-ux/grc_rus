@@ -54,6 +54,20 @@ export default function CehPage() {
                   Все проекты
                 </Link>
               </div>
+              <div className="mt-6 flex flex-wrap gap-4 text-sm font-semibold">
+                <Link
+                  href="/uslugi/remont-promyshlennogo"
+                  className="text-grc-orange transition hover:text-grc-orange-light"
+                >
+                  Ремонт промоборудования →
+                </Link>
+                <Link
+                  href="/uslugi"
+                  className="text-grc-muted transition hover:text-white"
+                >
+                  Все услуги →
+                </Link>
+              </div>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-grc-border">
               <Image
@@ -92,6 +106,13 @@ export default function CehPage() {
                 </article>
               ))}
             </div>
+            <p className="mt-8 text-sm text-grc-muted">
+              Полный перечень компетенций — в разделе{" "}
+              <Link href="/uslugi" className="text-grc-orange hover:underline">
+                услуги GRC
+              </Link>
+              .
+            </p>
           </div>
         </section>
 
