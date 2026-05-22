@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { directions } from "@/data/site";
 
 export function Directions() {
@@ -51,6 +52,15 @@ export function Directions() {
                     </li>
                   ))}
                 </ul>
+                {dir.href ? (
+                  <Link
+                    href={dir.href}
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-grc-orange transition hover:text-grc-orange-light"
+                  >
+                    Подробнее о выезде
+                    <span aria-hidden>→</span>
+                  </Link>
+                ) : null}
               </div>
             </article>
           ))}

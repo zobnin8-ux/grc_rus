@@ -32,7 +32,7 @@ export function Hero() {
               Отправить фото поломки
             </a>
             <a
-              href={brand.phoneHref}
+              href="#contact"
               className="rounded-sm border border-grc-border bg-grc-steel px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:border-grc-muted"
             >
               Связаться с инженером

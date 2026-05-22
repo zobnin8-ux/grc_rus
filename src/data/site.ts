@@ -31,6 +31,7 @@ export const directions = [
       "Мобильные металлообрабатывающие станки с ЧПУ на территории заказчика. Ремонт крупногабаритных узлов без демонтажа и длительного простоя.",
     image: images.mobileProduction,
     points: ["Расточка и фрезеровка на объекте", "Крупногабаритные детали", "Аварийные остановы"],
+    href: "/vyezd",
   },
   {
     title: "Стационарное производство",
@@ -38,6 +39,7 @@ export const directions = [
       "Полноценная производственная база: восстановление редукторов, валов, корпусов, изготовление оснастки и мобильных станков под задачу.",
     image: images.stationaryProduction,
     points: ["Станочный парк в цеху", "Капитальный ремонт узлов", "Нестандартные проекты"],
+    href: null as string | null,
   },
 ];
 
@@ -109,7 +111,16 @@ export const processSteps = [
   },
 ];
 
-export const cases = [
+export type CaseItem = {
+  title: string;
+  client: string;
+  result: string;
+  image: string;
+  tags: string[];
+  href?: string;
+};
+
+export const cases: CaseItem[] = [
   {
     title: "Восстановление зубчатого колеса конш-машины FRISSE",
     client: "Mondelēz Русь",
@@ -123,6 +134,7 @@ export const cases = [
     result: "Обработка на территории завода в рамках графика капитального ремонта.",
     image: "https://www.1grc.ru/wp-content/uploads/2025/12/image-4.jpg",
     tags: ["Пресс", "Выезд"],
+    href: "/vyezd#kejs-uaz",
   },
   {
     title: "Мехобработка колонн портального крана",
