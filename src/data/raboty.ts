@@ -106,6 +106,8 @@ export const workProjects: WorkProject[] = [
     image: img.i3,
     tags: ["Редуктор", "Цех"],
     filters: ["ceh", "press"],
+    detail: true,
+    href: "/ceh#kejs-mondelis",
   },
   {
     slug: "husky-grajner",

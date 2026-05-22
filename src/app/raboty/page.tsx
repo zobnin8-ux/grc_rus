@@ -29,12 +29,20 @@ export default function RabotyPage() {
               выездная мехобработка и стационарный ремонт. Три проекта с
               подробным разбором.
             </p>
-            <Link
-              href="/vyezd"
-              className="mt-6 inline-block text-sm font-semibold text-grc-orange transition hover:text-grc-orange-light"
-            >
-              Выездное производство →
-            </Link>
+            <div className="mt-6 flex flex-wrap gap-4 text-sm font-semibold">
+              <Link
+                href="/vyezd"
+                className="text-grc-orange transition hover:text-grc-orange-light"
+              >
+                Выездное производство →
+              </Link>
+              <Link
+                href="/ceh"
+                className="text-grc-orange transition hover:text-grc-orange-light"
+              >
+                Стационарный цех →
+              </Link>
+            </div>
           </div>
         </section>
 
