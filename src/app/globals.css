@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-grc-orange: #e85a1f;
+  --color-grc-orange-light: #ff7a3d;
+  --color-grc-steel: #1a1f26;
+  --color-grc-graphite: #0d1117;
+  --color-grc-slate: #2a323d;
+  --color-grc-muted: #8b95a5;
+  --color-grc-border: #2f3a47;
+  --font-display: var(--font-oswald), system-ui, sans-serif;
+  --font-body: var(--font-source), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-grc-graphite);
+  color: #e8edf4;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-grc-orange) 40%, transparent);
+}
+
+.grc-grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
