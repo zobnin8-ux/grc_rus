@@ -17,8 +17,9 @@ export default function UslugiPage() {
     <>
       <SubHeader />
       <main>
-        <section className="border-b border-grc-border py-14">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <section className="grc-band relative overflow-hidden border-b border-grc-border py-14">
+          <div className="grc-grid-bg absolute inset-0 opacity-25" />
+          <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-grc-orange">
               Услуги
             </p>
@@ -32,14 +33,14 @@ export default function UslugiPage() {
           </div>
         </section>
 
-        <section className="py-12">
+        <section className="bg-white py-12">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <div className="grid gap-8 md:grid-cols-2">
               {serviceDirections.map((dir) => (
                 <Link
                   key={dir.slug}
                   href={dir.href}
-                  className="group overflow-hidden rounded-sm border border-grc-border bg-grc-steel transition hover:border-grc-orange/50"
+                  className="group overflow-hidden rounded-sm border border-grc-line bg-white shadow-sm transition hover:border-grc-orange/50 hover:shadow-md"
                 >
                   <div className="relative aspect-[16/9]">
                     <Image
@@ -51,17 +52,17 @@ export default function UslugiPage() {
                     />
                   </div>
                   <div className="p-6">
-                    <h2 className="font-[family-name:var(--font-display)] text-xl font-bold uppercase text-white">
+                    <h2 className="font-[family-name:var(--font-display)] text-xl font-bold uppercase text-grc-ink">
                       {dir.title}
                     </h2>
-                    <p className="mt-2 text-sm text-grc-muted">
+                    <p className="mt-2 text-sm text-grc-ink-muted">
                       {dir.description}
                     </p>
                     <ul className="mt-4 flex flex-wrap gap-2">
                       {dir.highlights.map((h) => (
                         <li
                           key={h}
-                          className="rounded-sm border border-grc-border bg-grc-graphite px-2 py-1 text-xs text-grc-muted"
+                          className="rounded-sm border border-grc-line bg-grc-soft px-2 py-1 text-xs text-grc-ink-muted"
                         >
                           {h}
                         </li>
@@ -79,13 +80,13 @@ export default function UslugiPage() {
 
         <section
           id="otrasli"
-          className="scroll-mt-20 border-y border-grc-border bg-grc-steel/30 py-12"
+          className="scroll-mt-20 border-y border-grc-line bg-grc-soft py-12"
         >
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold uppercase text-white">
+            <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold uppercase text-grc-ink">
               Отрасли
             </h2>
-            <p className="mt-2 text-sm text-grc-muted">
+            <p className="mt-2 text-sm text-grc-ink-muted">
               Работаем с предприятиями полного цикла — примеры в{" "}
               <Link href="/raboty" className="text-grc-orange hover:underline">
                 каталоге проектов
@@ -96,7 +97,7 @@ export default function UslugiPage() {
               {industries.map((name) => (
                 <span
                   key={name}
-                  className="rounded-sm border border-grc-border bg-grc-graphite px-4 py-2 text-xs font-semibold text-grc-muted"
+                  className="rounded-sm border border-grc-line bg-white px-4 py-2 text-xs font-semibold text-grc-ink-muted"
                 >
                   {name}
                 </span>
@@ -105,19 +106,19 @@ export default function UslugiPage() {
           </div>
         </section>
 
-        <section className="py-12">
+        <section className="bg-white py-12">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold uppercase text-white">
+            <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold uppercase text-grc-ink">
               Компетенции по узлам
             </h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {services.map((s) => (
                 <article
                   key={s.title}
-                  className="rounded-sm border border-grc-border bg-grc-graphite/60 p-4"
+                  className="rounded-sm border border-grc-line bg-grc-paper p-4"
                 >
-                  <h3 className="text-sm font-semibold text-white">{s.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-grc-muted">
+                  <h3 className="text-sm font-semibold text-grc-ink">{s.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-grc-ink-muted">
                     {s.description}
                   </p>
                 </article>

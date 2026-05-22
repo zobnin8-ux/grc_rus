@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Oswald, Source_Sans_3 } from "next/font/google";
+import { PreviewBanner } from "@/components/PreviewBanner";
 import "./globals.css";
 
 const oswald = Oswald({
@@ -34,7 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={`${oswald.variable} ${sourceSans.variable}`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <PreviewBanner />
+        {children}
+      </body>
     </html>
   );
 }

@@ -3,7 +3,7 @@ import { brand, images } from "@/data/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-grc-border">
+    <section className="grc-band relative overflow-hidden border-b border-grc-border">
       <div className="grc-grid-bg absolute inset-0 opacity-40" />
       <div className="absolute inset-0 bg-gradient-to-r from-grc-graphite via-grc-graphite/95 to-grc-graphite/40" />
 

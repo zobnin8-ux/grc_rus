@@ -4,17 +4,17 @@ import { featuredOnHome, workProjects } from "@/data/raboty";
 
 export function Cases() {
   return (
-    <section id="cases" className="scroll-mt-20 py-20">
+    <section id="cases" className="scroll-mt-20 bg-grc-soft py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-grc-orange">
               Практика
             </p>
-            <h2 className="mt-3 font-[family-name:var(--font-display)] text-3xl font-bold uppercase text-white sm:text-4xl">
+            <h2 className="mt-3 font-[family-name:var(--font-display)] text-3xl font-bold uppercase text-grc-ink sm:text-4xl">
               Реальные проекты
             </h2>
-            <p className="mt-4 text-grc-muted">
+            <p className="mt-4 text-grc-ink-muted">
               Кейсы с реальными заказчиками — восстановление вместо закупки нового
               узла и срыва графика ремонта.
             </p>
@@ -40,7 +40,7 @@ export function Cases() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   {item.detail ? (
-                    <span className="absolute left-3 top-3 rounded-sm bg-grc-orange/90 px-2 py-0.5 text-[10px] font-bold uppercase text-white">
+                    <span className="absolute left-3 top-3 rounded-sm bg-grc-orange px-2 py-0.5 text-[10px] font-bold uppercase text-white">
                       Разбор
                     </span>
                   ) : null}
@@ -56,13 +56,13 @@ export function Cases() {
                       </span>
                     ))}
                   </div>
-                  <h3 className="mt-2 text-base font-semibold leading-snug text-white">
+                  <h3 className="mt-2 text-base font-semibold leading-snug text-grc-ink">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-sm font-medium text-grc-orange-light">
+                  <p className="mt-2 text-sm font-medium text-grc-orange">
                     {item.client}
                   </p>
-                  <p className="mt-3 flex-1 text-sm text-grc-muted">
+                  <p className="mt-3 flex-1 text-sm text-grc-ink-muted">
                     {item.result}
                   </p>
                   {item.href ? (
@@ -79,7 +79,7 @@ export function Cases() {
                 <Link
                   key={item.slug}
                   href={item.href}
-                  className="flex flex-col overflow-hidden rounded-sm border border-grc-border bg-grc-steel transition hover:border-grc-orange/50"
+                  className="flex flex-col overflow-hidden rounded-sm border border-grc-line bg-white shadow-sm transition hover:border-grc-orange/50 hover:shadow-md"
                 >
                   {inner}
                 </Link>
@@ -89,7 +89,7 @@ export function Cases() {
             return (
               <article
                 key={item.slug}
-                className="flex flex-col overflow-hidden rounded-sm border border-grc-border bg-grc-steel"
+                className="flex flex-col overflow-hidden rounded-sm border border-grc-line bg-white shadow-sm"
               >
                 {inner}
               </article>

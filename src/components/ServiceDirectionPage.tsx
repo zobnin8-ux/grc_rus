@@ -30,8 +30,9 @@ export function ServiceDirectionPage({
 
   return (
     <main>
-      <section className="relative overflow-hidden border-b border-grc-border">
+      <section className="grc-band relative overflow-hidden border-b border-grc-border">
         <div className="grc-grid-bg absolute inset-0 opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-grc-graphite via-grc-graphite/95 to-grc-graphite/50" />
         <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:items-center lg:py-20">
           <div>
             <Link
@@ -75,20 +76,20 @@ export function ServiceDirectionPage({
         </div>
       </section>
 
-      <section className="border-b border-grc-border py-16">
+      <section className="border-b border-grc-line bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold uppercase text-white">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold uppercase text-grc-ink">
             Что входит в услугу
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {opsList.map((op) => (
               <article
                 key={op.title}
-                className="rounded-sm border border-grc-border bg-grc-steel p-5"
+                className="rounded-sm border border-grc-line bg-grc-paper p-5"
               >
-                <h3 className="font-semibold text-grc-orange-light">{op.title}</h3>
+                <h3 className="font-semibold text-grc-orange">{op.title}</h3>
                 {op.description ? (
-                  <p className="mt-2 text-sm text-grc-muted">{op.description}</p>
+                  <p className="mt-2 text-sm text-grc-ink-muted">{op.description}</p>
                 ) : null}
               </article>
             ))}
@@ -96,14 +97,14 @@ export function ServiceDirectionPage({
         </div>
       </section>
 
-      <section className="border-b border-grc-border bg-grc-steel/30 py-12">
+      <section className="border-b border-grc-line bg-grc-soft py-12">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className="font-[family-name:var(--font-display)] text-xl font-bold uppercase text-white">
+          <h2 className="font-[family-name:var(--font-display)] text-xl font-bold uppercase text-grc-ink">
             Когда обращаются
           </h2>
           <ul className="mt-6 space-y-2">
             {when.map((item) => (
-              <li key={item} className="flex gap-2 text-sm text-grc-muted">
+              <li key={item} className="flex gap-2 text-sm text-grc-ink-muted">
                 <span className="text-grc-orange">▸</span>
                 {item}
               </li>
@@ -111,13 +112,13 @@ export function ServiceDirectionPage({
           </ul>
           <Link
             href={relatedCase.href}
-            className="mt-8 inline-block rounded-sm border border-grc-orange/50 bg-grc-graphite p-5 transition hover:border-grc-orange"
+            className="mt-8 inline-block rounded-sm border border-grc-line bg-white p-5 shadow-sm transition hover:border-grc-orange/50"
           >
             <p className="text-xs font-bold uppercase tracking-wide text-grc-orange">
               Пример из практики
             </p>
-            <p className="mt-2 font-semibold text-white">{relatedCase.title}</p>
-            <p className="text-sm text-grc-muted">{relatedCase.client}</p>
+            <p className="mt-2 font-semibold text-grc-ink">{relatedCase.title}</p>
+            <p className="text-sm text-grc-ink-muted">{relatedCase.client}</p>
             <span className="mt-2 inline-block text-xs font-bold uppercase text-grc-orange">
               Смотреть →
             </span>

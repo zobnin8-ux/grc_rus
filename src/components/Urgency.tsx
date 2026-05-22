@@ -1,6 +1,6 @@
 export function Urgency() {
   return (
-    <section className="border-y border-grc-orange/30 bg-grc-orange/10 py-16">
+    <section className="grc-band border-y border-grc-border bg-grc-slate py-16">
       <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
         <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold uppercase text-white sm:text-3xl">
           Станок встал — производство теряет деньги каждый час

@@ -12,16 +12,16 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="scroll-mt-20 py-20">
+    <section id="contact" className="scroll-mt-20 bg-grc-paper py-20">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-2 lg:px-6">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-grc-orange">
             Связь
           </p>
-          <h2 className="mt-3 font-[family-name:var(--font-display)] text-3xl font-bold uppercase text-white sm:text-4xl">
+          <h2 className="mt-3 font-[family-name:var(--font-display)] text-3xl font-bold uppercase text-grc-ink sm:text-4xl">
             Опишите задачу
           </h2>
-          <p className="mt-4 text-grc-muted">
+          <p className="mt-4 text-grc-ink-muted">
             Укажите узел, оборудование и срочность. Инженер уточнит возможность
             выезда или работы в цеху.
           </p>
@@ -29,44 +29,50 @@ export function Contact() {
           <div className="mt-8 space-y-4">
             <a
               href={brand.phoneHref}
-              className="block font-[family-name:var(--font-display)] text-2xl font-bold text-white hover:text-grc-orange-light"
+              className="block font-[family-name:var(--font-display)] text-2xl font-bold text-grc-ink hover:text-grc-orange"
             >
               {brand.phone}
             </a>
             <a
               href={`mailto:${brand.email}`}
-              className="block text-grc-muted hover:text-white"
+              className="block text-grc-ink-muted hover:text-grc-ink"
             >
               {brand.email}
             </a>
           </div>
         </div>
 
-        <div className="rounded-sm border border-grc-border bg-grc-steel p-6 sm:p-8">
+        <div className="rounded-sm border border-grc-line bg-white p-6 shadow-sm sm:p-8">
           {sent ? (
             <div className="py-12 text-center">
-              <p className="font-[family-name:var(--font-display)] text-xl font-bold uppercase text-white">
+              <p className="font-[family-name:var(--font-display)] text-xl font-bold uppercase text-grc-ink">
                 Заявка принята
               </p>
-              <p className="mt-2 text-sm text-grc-muted">
+              <p className="mt-2 text-sm text-grc-ink-muted">
                 Демо-форма: в продакшене здесь будет отправка на почту или CRM.
               </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="text-xs font-semibold uppercase text-grc-muted">
+                <label
+                  htmlFor="name"
+                  className="text-xs font-semibold uppercase text-grc-ink-muted"
+                >
                   Имя
                 </label>
                 <input
                   id="name"
                   name="name"
                   required
-                  className="mt-1 w-full rounded-sm border border-grc-border bg-grc-graphite px-3 py-2 text-white outline-none focus:border-grc-orange"
+                  className="mt-1 w-full rounded-sm border border-grc-line bg-white px-3 py-2 text-grc-ink outline-none focus:border-grc-orange"
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="text-xs font-semibold uppercase text-grc-muted">
+                <label
+                  htmlFor="phone"
+                  className="text-xs font-semibold uppercase text-grc-ink-muted"
+                >
                   Телефон
                 </label>
                 <input
@@ -74,21 +80,27 @@ export function Contact() {
                   name="phone"
                   type="tel"
                   required
-                  className="mt-1 w-full rounded-sm border border-grc-border bg-grc-graphite px-3 py-2 text-white outline-none focus:border-grc-orange"
+                  className="mt-1 w-full rounded-sm border border-grc-line bg-white px-3 py-2 text-grc-ink outline-none focus:border-grc-orange"
                 />
               </div>
               <div>
-                <label htmlFor="company" className="text-xs font-semibold uppercase text-grc-muted">
+                <label
+                  htmlFor="company"
+                  className="text-xs font-semibold uppercase text-grc-ink-muted"
+                >
                   Организация
                 </label>
                 <input
                   id="company"
                   name="company"
-                  className="mt-1 w-full rounded-sm border border-grc-border bg-grc-graphite px-3 py-2 text-white outline-none focus:border-grc-orange"
+                  className="mt-1 w-full rounded-sm border border-grc-line bg-white px-3 py-2 text-grc-ink outline-none focus:border-grc-orange"
                 />
               </div>
               <div>
-                <label htmlFor="task" className="text-xs font-semibold uppercase text-grc-muted">
+                <label
+                  htmlFor="task"
+                  className="text-xs font-semibold uppercase text-grc-ink-muted"
+                >
                   Описание задачи
                 </label>
                 <textarea
@@ -97,7 +109,7 @@ export function Contact() {
                   rows={4}
                   required
                   placeholder="Узел, оборудование, срочность, есть ли фото..."
-                  className="mt-1 w-full resize-y rounded-sm border border-grc-border bg-grc-graphite px-3 py-2 text-white outline-none placeholder:text-grc-muted/60 focus:border-grc-orange"
+                  className="mt-1 w-full resize-y rounded-sm border border-grc-line bg-white px-3 py-2 text-grc-ink outline-none placeholder:text-grc-ink-muted/50 focus:border-grc-orange"
                 />
               </div>
               <button
@@ -106,7 +118,7 @@ export function Contact() {
               >
                 Отправить заявку
               </button>
-              <p className="text-center text-xs text-grc-muted">
+              <p className="text-center text-xs text-grc-ink-muted">
                 Нажимая кнопку, вы соглашаетесь на обработку данных (демо).
               </p>
             </form>

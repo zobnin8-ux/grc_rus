@@ -8,6 +8,13 @@
   --color-grc-slate: #2a323d;
   --color-grc-muted: #8b95a5;
   --color-grc-border: #2f3a47;
+  --color-grc-paper: #f5f6f8;
+  --color-grc-card: #ffffff;
+  --color-grc-ink: #1a1f26;
+  --color-grc-ink-muted: #5c6778;
+  --color-grc-line: #d8dde5;
+  --color-grc-soft: #eef0f3;
+  --color-grc-highlight: #fff4ef;
   --font-display: var(--font-oswald), system-ui, sans-serif;
   --font-body: var(--font-source), system-ui, sans-serif;
 }
@@ -18,12 +25,19 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--color-grc-graphite);
-  color: #e8edf4;
+  background: var(--color-grc-paper);
+  color: var(--color-grc-ink);
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--color-grc-orange) 40%, transparent);
+  background: color-mix(in srgb, var(--color-grc-orange) 35%, transparent);
+}
+
+/* Тёмная полоса: hero, срочность, подвал, шапки внутренних страниц */
+.grc-band {
+  background-color: var(--color-grc-graphite);
+  color: #e8edf4;
+  border-color: var(--color-grc-border);
 }
 
 .grc-grid-bg {
@@ -31,4 +45,26 @@ body {
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 48px 48px;
+}
+
+.grc-grid-bg-light {
+  background-image:
+    linear-gradient(rgba(26, 31, 38, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 31, 38, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.grc-preview-banner {
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--color-grc-orange) 12%, var(--color-grc-paper)),
+    var(--color-grc-paper)
+  );
+  border-bottom: 1px solid var(--color-grc-line);
+  color: var(--color-grc-ink-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
 }

@@ -16,8 +16,9 @@ export default function RabotyPage() {
     <>
       <SubHeader />
       <main>
-        <section className="border-b border-grc-border py-14">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <section className="grc-band relative overflow-hidden border-b border-grc-border py-14">
+          <div className="grc-grid-bg absolute inset-0 opacity-25" />
+          <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-grc-orange">
               Портфолио
             </p>
@@ -44,7 +45,7 @@ export default function RabotyPage() {
               </Link>
               <Link
                 href="/uslugi"
-                className="text-grc-muted transition hover:text-white"
+                className="text-grc-muted transition hover:text-white/90"
               >
                 Услуги →
               </Link>
@@ -52,7 +53,7 @@ export default function RabotyPage() {
           </div>
         </section>
 
-        <section className="py-12">
+        <section className="bg-white py-12">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <RabotyCatalog />
           </div>

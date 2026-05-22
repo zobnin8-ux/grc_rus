@@ -39,13 +39,13 @@ function ProjectCard({ project }: { project: WorkProject }) {
             </span>
           ))}
         </div>
-        <h3 className="mt-2 text-sm font-semibold leading-snug text-white">
+        <h3 className="mt-2 text-sm font-semibold leading-snug text-grc-ink">
           {project.title}
         </h3>
-        <p className="mt-1 text-xs font-medium text-grc-orange-light">
+        <p className="mt-1 text-xs font-medium text-grc-orange">
           {project.client}
         </p>
-        <p className="mt-2 flex-1 text-xs leading-relaxed text-grc-muted">
+        <p className="mt-2 flex-1 text-xs leading-relaxed text-grc-ink-muted">
           {project.result}
         </p>
         {href ? (
@@ -61,7 +61,7 @@ function ProjectCard({ project }: { project: WorkProject }) {
     return (
       <Link
         href={href}
-        className="group flex flex-col overflow-hidden rounded-sm border border-grc-border bg-grc-steel transition hover:border-grc-orange/50"
+        className="group flex flex-col overflow-hidden rounded-sm border border-grc-line bg-white shadow-sm transition hover:border-grc-orange/50 hover:shadow-md"
       >
         {content}
       </Link>
@@ -69,7 +69,7 @@ function ProjectCard({ project }: { project: WorkProject }) {
   }
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-sm border border-grc-border bg-grc-steel">
+    <article className="flex flex-col overflow-hidden rounded-sm border border-grc-line bg-white shadow-sm">
       {content}
     </article>
   );
@@ -94,7 +94,7 @@ export function RabotyCatalog() {
             className={`rounded-sm border px-4 py-2 text-xs font-bold uppercase tracking-wide transition ${
               filter === f.id
                 ? "border-grc-orange bg-grc-orange text-white"
-                : "border-grc-border bg-grc-graphite text-grc-muted hover:border-grc-muted hover:text-white"
+                : "border-grc-line bg-white text-grc-ink-muted hover:border-grc-orange/40 hover:text-grc-ink"
             }`}
           >
             {f.label}
@@ -102,7 +102,7 @@ export function RabotyCatalog() {
         ))}
       </div>
 
-      <p className="mt-4 text-sm text-grc-muted">
+      <p className="mt-4 text-sm text-grc-ink-muted">
         Показано: {filtered.length} из {workProjects.length} проектов
       </p>
 
